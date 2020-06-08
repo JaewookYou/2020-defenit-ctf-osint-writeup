@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> health check! </title>
+</head>
+<body>
+<h1>curl - result</h1>
+{% if results %}
+ {% for result in results %}
+  <h3 style="color:#33eecc">{{ result }}</h3>
+ {% endfor %}
+ 
+{% endif %}
+</body>

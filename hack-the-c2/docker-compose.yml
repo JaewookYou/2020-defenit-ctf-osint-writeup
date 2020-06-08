@@ -1,0 +1,34 @@
+version: "3"
+services:
+  flask_server:
+    build: ./docker/flask_server
+    container_name: flask-server
+    volumes:
+      - ./data/SUPER_POWERFUL_RANSOMWARE:/app
+      - ./data/internal_service:/app2
+    stdin_open: true
+    tty: true
+    depends_on:
+      - db
+    networks:
+      backend:
+        ipv4_address: 172.22.0.3
+  db:
+    build: ./docker/mysql
+    container_name: mysql-db
+    environment:
+      MYSQL_ROOT_PASSWORD: "root"
+      MYSQL_DATABASE: "837165683de56acca5747371b1a3bbfb50627258a25996a72ee253801c743c99"
+      MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
+    volumes:
+      - "./data/mysql/:/docker-entrypoint-initdb.d/"
+    networks:
+      backend:
+        ipv4_address: 172.22.0.4
+    
+networks:
+  backend:
+    driver: bridge
+    ipam:
+      config:
+      - subnet: 172.22.0.0/24
