@@ -26,5 +26,3 @@ Hacker succeeded in hacking and seizing cryptocurrency, Ethereum! Hacker succeed
 * Server : None
 
 
-Additional description will be added soon
-
