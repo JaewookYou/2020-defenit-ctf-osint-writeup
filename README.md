@@ -5,3 +5,5 @@ officail author write up for 2020-defenit-ctf's OSINT category
 
  - bad-tumblers : 11 solver, 598 points
  - hack-the-c2 : 7 solver, 726 points
+
+**for more detail wrtie-up : https://ar9ang3.tistory.com/63**
